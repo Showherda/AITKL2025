@@ -1,0 +1,10 @@
+{% for founder in data.founders %}
+<div class="flex items-center gap-4 mb-4">
+  <img src="{{ founder.img }}" class="w-12 h-12 rounded-full" />
+  <div>
+    <p class="font-medium">{{ founder.name }}</p>
+    <p class="text-sm text-gray-500">{{ founder.role }}</p>
+    <a href="{{ founder.linkedin }}" class="text-blue-600 text-sm">LinkedIn</a>
+  </div>
+</div>
+{% endfor %}

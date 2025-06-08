@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Jobs{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-6 text-[#b4173a]">Job Listings</h1>
+
+  {% if jobs %}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {% for job in jobs %}
+      <div class="bg-white border p-4 rounded-lg shadow-sm">
+        <div class="flex items-center gap-4 mb-2">
+          <img src="{{ job.logo_url }}" class="w-12 h-12 rounded" alt="logo" />
+          <div>
+            <p class="text-lg font-semibold text-[#334f57]">{{ job.job_title }}</p>
+            <p class="text-sm text-gray-500">{{ job.company_name }}</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mb-2">Location: {{ job.location }}</p>
+        <a href="{{ job.apply_link }}" target="_blank" class="text-sm text-blue-600 hover:underline">Apply Now</a>
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-gray-600">No jobs available at the moment.</p>
+  {% endif %}
+</div>
+{% endblock %}

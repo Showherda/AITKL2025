@@ -1,0 +1,14 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Showcase{% endblock %}</title>
+  <link href="{{ url_for('static', filename='dist/output.css') }}" rel="stylesheet" />
+</head>
+<body class="bg-white text-gray-900">
+  {% block content %}{% endblock %}
+  <script src="https://unpkg.com/flowbite@latest/dist/flowbite.js"></script>
+</body>
+</html>

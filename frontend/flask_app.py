@@ -2,6 +2,10 @@ from flask import Flask, render_template, jsonify
 import json
 import os
 
+import sys
+
+sys.path.append('./data/')
+
 app = Flask(__name__)
 
 def load_companies():

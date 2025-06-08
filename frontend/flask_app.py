@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 def load_companies():
-    with open(os.path.join('frontend/data', 'showcase_data.json'), 'r') as f:
+    with open(os.path.join('./data', 'showcase_data.json'), 'r') as f:
         return json.load(f)
 
 @app.route('/')

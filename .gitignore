@@ -7,3 +7,5 @@ node_modules
 .python-version
 uv.lock
 /rough-tests
+__pycache__
+venv

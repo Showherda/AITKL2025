@@ -1,6 +1,169 @@
 [
   {
-  "id": 0,
+    "id": 0,
+    "name": "AirAsia Foundation",
+    "short_summary": "Social impact, community development, education.",
+    "founded": "2011",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Kuala Lumpur",
+    "tags": ["SOCIAL IMPACT", "COMMUNITY DEVELOPMENT", "EDUCATION"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2011, AirAsia Foundation supports social enterprises and community development initiatives across Asia.",
+    "website": "https://www.airasiafoundation.com/",
+    "category": "Social Impact",
+    "jobs_count": 0,
+    "news": [],
+    "grant": [],
+    "program": [],
+    "founders": []
+  },
+{
+    "id": 1,
+    "name": "Biji-biji Initiative",
+    "short_summary": "Upcycling, sustainability consulting, ethical products.",
+    "founded": "2013",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Kuala Lumpur",
+    "tags": ["ENVIRONMENT", "CIRCULAR ECONOMY", "SUSTAINABILITY"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2013, Biji-biji Initiative promotes sustainable living through upcycling, ethical products, and consulting services.",
+    "website": "",
+    "category": "Environment",
+    "news": [],
+    "grant": [
+      {
+        "title": "British Council’s Entrepreneurs for Good",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "program": [
+      {
+        "title": "Yayasan Inovasi Malaysia, EcoWorld, Ministry of Youth and Sports",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "founders": []
+  },
+  {
+    "id": 2,
+    "name": "Wild Asia",
+    "short_summary": "Environmental consultancy, responsible tourism.",
+    "founded": "2003",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Kuala Lumpur",
+    "tags": ["ENVIRONMENT", "AGRICULTURE", "TOURISM"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2003, Wild Asia focuses on conservation and sustainable agriculture through environmental consultancy and responsible tourism.",
+    "website": "https://www.wildasia.org/",
+    "category": "Environment",
+    "news": [],
+    "grant": [
+      {
+        "title": "Client-funded projects (Cargill, HSBC, Nestle)",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "program": [
+      {
+        "title": "International partnerships",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "founders": []
+  },
+  {
+    "id": 3,
+    "name": "Sluvi Natural",
+    "short_summary": "Natural skincare from local farms.",
+    "founded": "2016",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Sarawak",
+    "tags": ["AGRICULTURE", "WOMEN EMPOWERMENT", "SKINCARE"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2016, Sluvi Natural produces natural skincare products while empowering local farmers through sustainable agriculture.",
+    "website": "https://www.sluvi.com/",
+    "category": "Agriculture",
+    "news": [],
+    "grant": [],
+    "program": [
+      {
+        "title": "Provides pesticide-free training to neighboring villages",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "founders": []
+  },
+  {
+    "id": 4,
+    "name": "Efinity",
+    "short_summary": "Affordable water filtration systems for rural communities.",
+    "founded": "2015",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Sabah",
+    "tags": ["HEALTH", "RURAL DEVELOPMENT", "WATER"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2015, Efinity improves access to clean water for rural communities through affordable filtration systems.",
+    "website": "https://www.efinity.my/",
+    "category": "Health",
+    "news": [],
+    "grant": [
+      {
+        "title": "Seed funding from grassroots competition",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "program": [],
+    "founders": []
+  },
+  {
+    "id": 5,
+    "name": "PichaEats",
+    "short_summary": "Catering by refugee families.",
+    "founded": "2016",
+    "founder_size": "N/A",
+    "team_size": "N/A",
+    "status": "Active",
+    "state": "Kuala Lumpur",
+    "tags": ["REFUGEE SUPPORT", "FOOD & BEVERAGE", "SOCIAL ENTERPRISE"],
+    "logo_url": "/static/img/airasia.png",
+    "about": "Founded in 2016, PichaEats empowers refugee families by providing catering opportunities and addressing unemployment.",
+    "website": "https://www.pichaeats.com/",
+    "category": "Food & Beverage",
+    "news": [],
+    "grant": [
+      {
+        "title": "Expo Live Innovation Impact Grant (Expo 2020 Dubai)",
+        "url": "https://www.pichaeats.com/",
+        "date": "N/A"
+      }
+    ],
+    "program": [
+      {
+        "title": "MGTC (Malaysian Green Technology and Climate Change Centre)",
+        "url": "#",
+        "date": "N/A"
+      }
+    ],
+    "founders": []
+  },
+  {
+  "id": 6,
   "name": "DoorDash",
   "short_summary": "Restaurant delivery.",
   "founded": "2013",
@@ -8,124 +171,11 @@
   "team_size": "8600",
   "status": "Active",
   "state": "Kuala Lampur",
-  "tags": ["SUMMER 2013", "PUBLIC", "MARKETPLACE", "E-COMMERCE", "SAN FRANCISCO"],
+  "tags": ["RESTURANT", "DELIVERY", "SERVICE"],
   "logo_url": "/static/img/airasia.png",
   "about": "Founded in 2013, DoorDash is a San Francisco-based technology company passionate about transforming local businesses...",
   "website": "http://doordash.com",
   "category": "Resturant",
-  "jobs_count": 1,
-  "news": [
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    },
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "grant": [
-    {
-      "title": "Grant for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "program": [
-    {
-      "title": "Program for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "founders": [
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    },
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    }
-  ]
-},
-{
-  "id": 1,
-  "name": "Socar",
-  "short_summary": "Restaurant delivery.",
-  "founded": "2013",
-  "founder_size": "12",
-  "team_size": "8600",
-  "status": "Active",
-  "state": "Kuala Lampur",
-  "tags": ["SUMMER 2013", "PUBLIC", "MARKETPLACE", "E-COMMERCE", "SAN FRANCISCO"],
-  "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZxdmh8E0PMpCemfe6mpMGy6KLaUyVpsflfg&s",
-  "about": "Founded in 2013, DoorDash is a San Francisco-based technology company passionate about transforming local businesses...",
-  "website": "http://doordash.com",
-  "category": "Resturant",
-  "jobs_count": 1,
-  "news": [
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    },
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "grant": [
-    {
-      "title": "Grant for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "program": [
-    {
-      "title": "Program for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "founders": [
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    },
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "LinkedIn",
-  "short_summary": "Restaurant delivery.",
-  "founded": "2013",
-  "founder_size": "12",
-  "team_size": "8600",
-  "status": "Active",
-  "state": "Kuala Lampur",
-  "tags": ["SUMMER 2013", "PUBLIC", "MARKETPLACE", "E-COMMERCE", "SAN FRANCISCO"],
-  "logo_url": "/static/img/airasia.png",
-  "about": "Founded in 2013, DoorDash is a San Francisco-based technology company passionate about transforming local businesses...",
-  "website": "http://doordash.com",
-  "category": "Resturant",
-  "jobs_count": 1,
   "news": [
     {
       "title": "DoorDash wants to deliver everything - The Hustle",
@@ -167,63 +217,4 @@
     }
   ]
 }
-,
-{
-  "id": 3,
-  "name": "Facebook",
-  "short_summary": "Restaurant delivery.",
-  "founded": "2013",
-  "founder_size": "12",
-  "team_size": "8600",
-  "status": "Active",
-  "state": "Kuala Lampur",
-  "tags": ["SUMMER 2013", "PUBLIC", "MARKETPLACE", "E-COMMERCE", "SAN FRANCISCO"],
-  "logo_url": "/static/img/airasia.png",
-  "about": "Founded in 2013, DoorDash is a San Francisco-based technology company passionate about transforming local businesses...",
-  "website": "http://doordash.com",
-  "category": "Resturant",
-  "jobs_count": 1,
-  "news": [
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    },
-    {
-      "title": "DoorDash wants to deliver everything - The Hustle",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "grant": [
-    {
-      "title": "Grant for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "program": [
-    {
-      "title": "Program for DoorDash",
-      "url": "#",
-      "date": "Nov 20, 2022"
-    }
-  ],
-  "founders": [
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    },
-    {
-      "name": "Andy Fang",
-      "role": "Founder",
-      "img": "/static/img/airasia.png",
-      "linkedin": "#"
-    }
-  ]
-}
-
-
 ]

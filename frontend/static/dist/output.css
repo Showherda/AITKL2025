@@ -1021,6 +1021,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
@@ -1544,6 +1547,9 @@
       text-align: center;
     }
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1570,6 +1576,9 @@
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
   }
   .max-w-6xl {
     max-width: var(--container-6xl);
@@ -1644,6 +1653,9 @@
   }
   .flex-shrink {
     flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .-translate-x-full {
     --tw-translate-x: -100%;
@@ -2019,11 +2031,17 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
   .bg-gray-900\/50 {
     background-color: color-mix(in srgb, #111827 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-gray-900) 50%, transparent);
     }
+  }
+  .bg-green-600 {
+    background-color: var(--color-green-600);
   }
   .bg-transparent {
     background-color: transparent;
@@ -2080,6 +2098,18 @@
       fill: white !important;
     }
   }
+  .apexcharts-gridline {
+    stroke: var(--color-gray-200) !important;
+    .dark & {
+      stroke: var(--color-gray-700) !important;
+    }
+  }
+  .apexcharts-xcrosshairs {
+    stroke: var(--color-gray-200) !important;
+    .dark & {
+      stroke: var(--color-gray-700) !important;
+    }
+  }
   .apexcharts-ycrosshairs {
     stroke: var(--color-gray-200) !important;
     .dark & {
@@ -2101,6 +2131,9 @@
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
@@ -2358,6 +2391,9 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -2431,6 +2467,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .hover\:bg-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-700);
       }
     }
   }

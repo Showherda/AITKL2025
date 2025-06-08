@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Apply Now - List Your Startup{% endblock %}
+
+{% block content %}
+{% include "components/header.html" %}
+
+<div class="max-w-4xl mx-auto p-6">
+  <h1 class="text-3xl font-bold text-[#334f57] mb-6">List Your Startup</h1>
+
+  <form action="/apply" method="POST" enctype="multipart/form-data" class="space-y-6">
+
+    <!-- Basic Info -->
+    <div>
+      <label class="block font-medium">Company Logo</label>
+      <input type="file" name="logo" accept="image/*" required>
+    </div>
+
+    <div>
+      <label class="block font-medium">Company Name</label>
+      <input type="text" name="name" class="w-full border rounded p-2" required>
+    </div>
+
+    <div>
+      <label class="block font-medium">Summary (short description)</label>
+      <textarea name="short_summary" class="w-full border rounded p-2" required></textarea>
+    </div>
+
+    <div>
+      <label class="block font-medium">Full Company Description</label>
+      <textarea name="about" class="w-full border rounded p-2" rows="4" required></textarea>
+    </div>
+
+    <div>
+      <label class="block font-medium">Status</label>
+      <select name="status" class="w-full border rounded p-2">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-medium">Website URL</label>
+      <input type="url" name="website" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label class="block font-medium">Founding Year</label>
+      <input type="number" name="founded" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label class="block font-medium">Startup Category</label>
+      <input type="text" name="state" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label class="block font-medium">Founding Team Size</label>
+      <input type="number" name="founder_size" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label class="block font-medium">Total Employees</label>
+      <input type="number" name="team_size" class="w-full border rounded p-2">
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Founders -->
+    <h2 class="text-xl font-semibold">Founder Details</h2>
+    <div>
+      <label>Name</label>
+      <input type="text" name="founder_name" class="w-full border rounded p-2" required>
+    </div>
+
+    <div>
+      <label>Photo</label>
+      <input type="file" name="founder_img" accept="image/*" required>
+    </div>
+
+    <div>
+      <label>LinkedIn URL</label>
+      <input type="url" name="founder_linkedin" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input type="email" name="founder_email" class="w-full border rounded p-2">
+    </div>
+
+    <div>
+      <label>Phone Number</label>
+      <input type="text" name="founder_phone" class="w-full border rounded p-2">
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Grant Info -->
+    <h2 class="text-xl font-semibold">Grant History</h2>
+    <div>
+      <label>Received Grant?</label>
+      <select name="got_grant" class="w-full border rounded p-2">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Upload Pitch Deck (PDF)</label>
+      <input type="file" name="pitch_deck" accept="application/pdf">
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="bg-[#b4173a] text-white px-6 py-2 rounded hover:bg-red-700">
+      Submit Application
+    </button>
+  </form>
+</div>
+{% include "components/footer.html" %}
+
+{% endblock %}

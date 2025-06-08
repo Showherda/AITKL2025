@@ -3,6 +3,10 @@
 {% block title %}Showcase{% endblock %}
 
 {% block content %}
+
+<!-- Header (shared site navigation) -->
+{% include "components/header.html" %}
+
 <!-- Main container with max width and padding -->
 <div class="max-w-6xl mx-auto p-6">
 
@@ -13,7 +17,7 @@
     <div>
       <!-- Company name as main heading -->
       <h1 class="text-3xl font-bold">{{ data.name }}</h1>
-      <p class="text-gray-600">{{ data.description }}</p>
+      <p class="text-gray-600">{{ data.short_summary }}</p>
 
       <!-- Tags container with flex wrap and spacing -->
       <div class="flex flex-wrap gap-2 mt-2">
@@ -32,20 +36,6 @@
 
     <!-- Left section spans 2 columns: Company about and news -->
     <div class="col-span-2">
-      <!-- Navigation tabs above company description -->
-      <nav class="flex gap-6 mb-4 border-b border-gray-300 pb-2">
-        <a href="#company-section" class="text-[#b4173a] font-semibold hover:underline cursor-pointer">Company</a>
-        
-        <a href="{{ url_for('jobs') }}" class="text-gray-700 hover:text-[#b4173a] hover:underline">
-          Jobs [{{ data.jobs_count or 0 }}]
-        </a>
-        
-        <!-- Website tab: opens company website in new tab -->
-        <a href="{{ data.website }}" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-[#b4173a] hover:underline">
-          Website
-        </a>
-      </nav>
-
       <!-- Company description heading -->
       <h2 id="company-section" class="text-xl font-semibold mb-2">Company</h2>  
       <!-- Detailed about text -->
@@ -54,8 +44,8 @@
       <!-- Latest grant history section -->
       <h2 class="text-xl font-semibold mt-6 mb-2">Grant History</h2>
       <ul class="space-y-2">
-        <!-- Loop through news items -->
-        {% for item in data.news %}
+        <!-- Loop through grant items -->
+        {% for item in data.grant %}
           <li>
             <!-- News title linking to source -->
             <a href="{{ item.url }}" class="text-blue-600 hover:underline">{{ item.title }}</a>
@@ -85,7 +75,7 @@
       <h2 class="text-xl font-semibold mt-6 mb-2">Program Participation</h2>
       <ul class="space-y-2">
         <!-- Loop through news items -->
-        {% for item in data.news %}
+        {% for item in data.program %}
           <li>
             <!-- News title linking to source -->
             <a href="{{ item.url }}" class="text-blue-600 hover:underline">{{ item.title }}</a>
@@ -100,49 +90,50 @@
 
     <!-- Right section spans 1 column: company details and founders -->
     <div>
-      <div class="border rounded-lg p-4 mb-6">
+      <div class="bg-[#334f57] text-white border rounded-lg p-4 mb-6">
+        <div class="flex justify-center mb-4">
         <img src="{{ data.logo_url }}" class="w-20 h-20 rounded" alt="{{ data.name }}" />
+        </div>
         <h3 class="text-lg font-semibold mb-4">{{ data.name }}</h3>
         <div class="grid grid-cols-2 gap-y-2 text-sm">
-          <span class="text-gray-600 font-medium">Founded:</span>
+          <span class="text-white font-medium">Founded:</span>
           <span>{{ data.founded }}</span>
 
-          <span class="text-gray-600 font-medium">Batch:</span>
-          <span>{{ data.batch }}</span>
+          <span class="text-white font-medium">Founder:</span>
+          <span>{{ data.founder_size }}</span>
 
-          <span class="text-gray-600 font-medium">Team Size:</span>
+          <span class="text-white font-medium">Team Size:</span>
           <span>{{ data.team_size }}</span>
 
-          <span class="text-gray-600 font-medium">Status:</span>
+          <span class="text-white font-medium">Status:</span>
           <span class="text-green-600">{{ data.status }}</span>
 
-          <span class="text-gray-600 font-medium">Location:</span>
-          <span>{{ data.location }}</span>
+          <span class="text-white font-medium">State:</span>
+          <span>{{ data.state }}</span>
         </div>
 
         <!-- Website link full width with margin -->
         <a href="{{ data.website }}" 
-          class="text-blue-600 hover:underline mt-4 block text-sm font-medium">
+          class="text-blue-400 hover:underline mt-4 block text-sm font-medium">
           Visit Website
         </a>
       </div>
-
 
       <!-- Founders section -->
       <div>
         <h3 class="text-lg font-semibold mb-2">Founders</h3>
         <!-- Loop through each founder and display their info -->
         {% for founder in data.founders %}
-        <div class="flex items-center gap-4 mb-4">
+        <div class="bg-[#334f57] text-white border rounded-lg flex items-center gap-4 p-4 mb-4">
           <!-- Founder photo as a circle -->
           <img src="{{ founder.img }}" class="w-12 h-12 rounded-full" />
           <div>
             <!-- Founder name -->
             <p class="font-medium">{{ founder.name }}</p>
             <!-- Founder role with muted text -->
-            <p class="text-sm text-gray-500">{{ founder.role }}</p>
+            <p class="text-sm text-gray-200">{{ founder.role }}</p>
             <!-- LinkedIn profile link -->
-            <a href="{{ founder.linkedin }}" class="text-blue-600 text-sm">LinkedIn</a>
+            <a href="{{ founder.linkedin }}" class="text-blue-400 text-sm">LinkedIn</a>
           </div>
         </div>
         {% endfor %}
@@ -151,4 +142,8 @@
 
   </div>
 </div>
+
+<!-- Footer (shared site footer) -->
+{% include "components/footer.html" %}
+
 {% endblock %}

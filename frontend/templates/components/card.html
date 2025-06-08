@@ -1,24 +1,8 @@
-<!-- card.html: Reusable company card component -->
-<div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-4 cursor-pointer">
-  <!-- Company logo and name section -->
-  <div class="flex items-center gap-4">
-    <img src="{{ company.logo_url }}" alt="{{ company.name }}" class="w-16 h-16 rounded object-cover" />
-    <div>
-      <h3 class="text-lg font-semibold text-[#b4173a]">{{ company.name }}</h3>
-      <p class="text-gray-600 text-sm truncate max-w-xs">{{ company.short_description }}</p>
-    </div>
-  </div>
-
-  <!-- Tags section -->
-  <div class="mt-3 flex flex-wrap gap-2">
-    {% for tag in company.tags %}
-      <span class="bg-[#334f57] text-white text-xs px-2 py-1 rounded">{{ tag }}</span>
-    {% endfor %}
-  </div>
-
-  <!-- Footer with basic info -->
-  <div class="mt-4 text-gray-700 text-sm flex justify-between items-center">
-    <span>Founded: {{ company.founded }}</span>
-    <span>Team Size: {{ company.team_size }}</span>
-  </div>
+<div class="bg-white border rounded-lg p-4 shadow hover:shadow-lg transition">
+  <img src="{{ company.logo_url }}" alt="{{ company.name }}" class="w-16 h-16 rounded mb-2" />
+  <h2 class="font-semibold text-lg text-[#334f57]">{{ company.name }}</h2>
+  <p class="text-sm text-gray-600 line-clamp-3">{{ company.short_summary }}</p>
+  <a href="/showcase/{{ company.id }}" class="text-[#b4173a] text-sm mt-2 inline-block hover:underline">
+    View Details →
+  </a>
 </div>

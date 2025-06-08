@@ -9,6 +9,10 @@ PITCH_FOLDER = os.path.join(UPLOAD_FOLDER, 'pitchdecks')
 FOUNDER_FOLDER = os.path.join(UPLOAD_FOLDER, 'founders')
 LOGO_FOLDER = os.path.join(UPLOAD_FOLDER, 'logos')
 
+import sys
+
+sys.path.append('./data/')
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 

@@ -1,6 +1,9 @@
-venv
+.venv
 node_modules
 # dist
 .DS_Store
 .env
 .vscode
+.python-version
+uv.lock
+/rough-tests

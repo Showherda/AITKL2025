@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Showcase{% endblock %}
+
+{% block content %}
+
+<!-- Header (shared site navigation) -->
+{% include "components/header.html" %}
+
+<!-- Main container with max width and padding -->
+<div class="max-w-6xl mx-auto p-6">
+
+  <!-- Header section: logo and basic info side by side -->
+  <div class="flex gap-6">
+    <!-- Company logo with fixed size and rounded corners -->
+    <img src="{{ data.logo }}" class="w-20 h-20 rounded" alt="{{ data.name }}" />
+    <div>
+      <!-- Company name as main heading -->
+      <h1 class="text-3xl font-bold">{{ data.name }}</h1>
+      <p class="text-gray-600">{{ data.summary }}</p>
+
+      <!-- Tags container with flex wrap and spacing -->
+      <div class="flex flex-wrap gap-2 mt-2">
+        {% for tag in data.tags %}
+          <span class="bg-gray-200 text-sm px-2 py-1 rounded">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Horizontal divider to separate header from content -->
+  <hr class="my-6" >
+
+  <!-- Two-column grid layout for detailed info -->
+  <div class="grid grid-cols-3 gap-6">
+
+    <!-- Left section spans 2 columns: Company about and news -->
+    <div class="col-span-2">
+      <!-- Company description heading -->
+      <h2 id="company-section" class="text-xl font-semibold mb-2">Company</h2>  
+      <!-- Detailed about text -->
+      <p class="text-gray-700">{{ data.company_description }}</p>
+
+      <!-- Latest grant history section -->
+      <h2 class="text-xl font-semibold mt-6 mb-2">Grant History</h2>
+      <ul class="space-y-2">
+        <!-- Loop through grant items -->
+        {% for item in data.grant %}
+          <li>
+            <!-- News title linking to source -->
+            <a href="{{ item.url }}" class="text-blue-600 hover:underline">{{ item.title }}</a>
+            <!-- News date in smaller, muted text -->
+            <p class="text-sm text-gray-500">{{ item.date }}</p>
+          </li>
+          <hr class="my-6 border-t border-gray-200" />
+        {% endfor %}
+      </ul>
+      
+      <!-- Latest news section -->
+      <h2 class="text-xl font-semibold mt-6 mb-2">Latest News</h2>
+      <ul class="space-y-2">
+        <!-- Loop through news items -->
+        {% for item in data.news %}
+          <li>
+            <!-- News title linking to source -->
+            <a href="{{ item.url }}" class="text-blue-600 hover:underline">{{ item.title }}</a>
+            <!-- News date in smaller, muted text -->
+            <p class="text-sm text-gray-500">{{ item.date }}</p>
+          </li>
+          <hr class="my-6 border-t border-gray-200" />
+        {% endfor %}
+      </ul>
+
+      <!-- Latest Program participation section -->
+      <h2 class="text-xl font-semibold mt-6 mb-2">Program Participation</h2>
+      <ul class="space-y-2">
+        <!-- Loop through news items -->
+        {% for item in data.program %}
+          <li>
+            <!-- News title linking to source -->
+            <a href="{{ item.url }}" class="text-blue-600 hover:underline">{{ item.title }}</a>
+            <!-- News date in smaller, muted text -->
+            <p class="text-sm text-gray-500">{{ item.date }}</p>
+          </li>
+          <hr class="my-6 border-t border-gray-200" />
+        {% endfor %}
+      </ul>
+      
+    </div>
+
+    <!-- Right section spans 1 column: company details and founders -->
+    <div>
+      <div class="bg-[#334f57] text-white border rounded-lg p-4 mb-6">
+        <div class="flex justify-center mb-4">
+        <img src="{{ data.logo }}" class="w-20 h-20 rounded" alt="{{ data.name }}" />
+        </div>
+        <h3 class="text-lg font-semibold mb-4">{{ data.name }}</h3>
+        <div class="grid grid-cols-2 gap-y-2 text-sm">
+          <span class="text-white font-medium">Founded:</span>
+          <span>{{ data.founding_year }}</span>
+
+          <span class="text-white font-medium">Founder:</span>
+          <span>{{ data.founding_team_size }}</span>
+
+          <span class="text-white font-medium">Team Size:</span>
+          <span>{{ data.founding_team_size }}</span>
+
+          <span class="text-white font-medium">Status:</span>
+          <span class="text-green-600">{{ data.status }}</span>
+
+          <span class="text-white font-medium">State:</span>
+          <span>{{ data.location }}</span>
+        </div>
+
+        <!-- Website link full width with margin -->
+        <a href="{{ data.website_url }}" 
+          class="text-blue-400 hover:underline mt-4 block text-sm font-medium">
+          Visit Website
+        </a>
+      </div>
+
+      <!-- Founders section -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Founders</h3>
+        <!-- Loop through each founder and display their info -->
+        {% for founder in data.founder %}
+        <div class="bg-[#334f57] text-white border rounded-lg flex items-center gap-4 p-4 mb-4">
+          <!-- Founder photo as a circle -->
+          <img src="{{ founder.img }}" class="w-12 h-12 rounded-full" />
+          <div>
+            <!-- Founder name -->
+            <p class="font-medium">{{ founder.name }}</p>
+            <!-- Founder role with muted text -->
+            <p class="text-sm text-gray-200">{{ founder.role }}</p>
+            <!-- LinkedIn profile link -->
+            <a href="{{ founder.linkedin }}" class="text-blue-400 text-sm">LinkedIn</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer (shared site footer) -->
+{% include "components/footer.html" %}
+
+{% endblock %}

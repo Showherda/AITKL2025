@@ -27,5 +27,6 @@ startups = Table(
     Column('location', String),
     Column('founder', JSONB)  # Dict with founder details
 )
-
-meta.create_all(engine)
+if __name__ == "__main__":
+    # Create the table in the database
+    meta.create_all(engine)

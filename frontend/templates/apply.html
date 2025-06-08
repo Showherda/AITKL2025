@@ -3,8 +3,10 @@
 {% block title %}Apply Now - List Your Startup{% endblock %}
 
 {% block content %}
+{% include "components/header.html" %}
+
 <div class="max-w-4xl mx-auto p-6">
-  <h1 class="text-3xl font-bold text-[#334f57] mb-6">List Your Company</h1>
+  <h1 class="text-3xl font-bold text-[#334f57] mb-6">List Your Startup</h1>
 
   <form action="/apply" method="POST" enctype="multipart/form-data" class="space-y-6">
 
@@ -114,4 +116,6 @@
     </button>
   </form>
 </div>
+{% include "components/footer.html" %}
+
 {% endblock %}
